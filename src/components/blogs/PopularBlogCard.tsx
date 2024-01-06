@@ -4,7 +4,7 @@ import React from "react";
 
 const PopularBlogCard = ({ blog }: any) => {
   return (
-    <div className="bg-white shadow max-h-[480px] h-fit mx-auto">
+    <div className="bg-white shadow max-h-[480px] h-fit">
       <div className="max-h-[244.333px] h-full overflow-hidden">
         <Image
           className="h-full w-full object-cover hover:scale-110 duration-700"
@@ -22,7 +22,7 @@ const PopularBlogCard = ({ blog }: any) => {
         <h1 className="text-black text-[10.886px] leading-[16.33px] mt-[4.88px] font-roboto">
           {blog.description}
         </h1>
-        <div className="mt-[16px]">{iPBHr}</div>
+        <div className="mt-[16px] w-full border-b-[1px] border-[#C4C4C4]"></div>
         <div className="mt-[10.32px] flex items-center gap-[13.77px]">
           <Image
             className="size-[41.296px] rounded-full object-cover"
