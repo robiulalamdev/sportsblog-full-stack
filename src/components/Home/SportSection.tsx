@@ -36,7 +36,10 @@ const SportSection = () => {
       <h1 className="mt-[34px] max-w-[941px] mx-auto font-bold text-[36px] font-montserrat text-black text-center">
         You’ve got something to say. We’ve got people who want to hear it.
       </h1>
-      <Button className="mt-[53px] rounded-[50px] bg-black text-white w-[236px] h-[50px] text-xs font-bold leading-[16px]">
+      <Button
+        placeholder=""
+        className="mt-[53px] rounded-[50px] bg-black text-white w-[236px] h-[50px] text-xs font-bold leading-[16px]"
+      >
         Start your SportsBlog
       </Button>
     </div>

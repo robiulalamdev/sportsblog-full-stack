@@ -11,7 +11,10 @@ const RecentBlogs = () => {
         <h1 className="text-[35px] font-bold text-black leading-[42px] font-roboto underline">
           Recent
         </h1>
-        <Button className="border border-black text-black bg-white font-inter text-base leading-[24px] px-6 py-3 rounded-[5px]">
+        <Button
+          placeholder=""
+          className="border border-black text-black bg-white font-inter text-base leading-[24px] px-6 py-3 rounded-[5px]"
+        >
           View all
         </Button>
       </div>

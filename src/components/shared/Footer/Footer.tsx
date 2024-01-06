@@ -16,7 +16,10 @@ const Footer = () => {
               placeholder="Your email"
               required
             />
-            <Button className="bg-primary text-white rounded-[46px] w-[96px] h-[48px]">
+            <Button
+              placeholder=""
+              className="bg-primary text-white rounded-[46px] w-[96px] h-[48px]"
+            >
               SEND
             </Button>
           </form>

@@ -36,7 +36,7 @@ const LoginPage = () => {
         </button>
         <div>
           <Link href="/reset-password">
-            <p className="text-base font-semibold text-white" htmlFor="email">
+            <p className="text-base font-semibold text-white">
               Forgot Password?
             </p>
           </Link>

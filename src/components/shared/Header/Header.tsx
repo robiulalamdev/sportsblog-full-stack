@@ -15,11 +15,17 @@ const Header = () => {
         />
         <div className="flex items-center gap-4">
           <Link href="/login">
-            <Button className="bg-black rounded-[5px] border border-white leading-[24px] text-sm md:text-base normal-case px-2 md:px-5 h-[30px] md:h-[40px] flex justify-center items-center text-nowrap text-white ">
+            <Button
+              placeholder=""
+              className="bg-black rounded-[5px] border border-white leading-[24px] text-sm md:text-base normal-case px-2 md:px-5 h-[30px] md:h-[40px] flex justify-center items-center text-nowrap text-white "
+            >
               Log in
             </Button>
           </Link>
-          <Button className="bg-primary rounded-[5px] leading-[24px] text-base w-[100px] md:w-[120px] h-[30px] md:h-[40px] flex justify-center items-center font-semibold md:font-bold text-black text-[13px] text-nowrap normal-case">
+          <Button
+            placeholder=""
+            className="bg-primary rounded-[5px] leading-[24px] text-base w-[100px] md:w-[120px] h-[30px] md:h-[40px] flex justify-center items-center font-semibold md:font-bold text-black text-[13px] text-nowrap normal-case"
+          >
             Write Article
           </Button>
         </div>

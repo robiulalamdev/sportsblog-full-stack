@@ -13,7 +13,10 @@ const PopuplarBlogs = () => {
         <h1 className="text-[48px] font-bold text-black leading-[42px] font-roboto">
           Popular
         </h1>
-        <Button className="border border-black text-black bg-white font-inter text-base leading-[24px] px-6 py-3 rounded-[5px]">
+        <Button
+          placeholder=""
+          className="border border-black text-black bg-white font-inter text-base leading-[24px] px-6 py-3 rounded-[5px]"
+        >
           View all
         </Button>
       </div>
@@ -26,7 +29,10 @@ const PopuplarBlogs = () => {
         ))}
       </div>
       <div className="flex justify-center items-center mt-[39.8px]">
-        <Button className="h-[65px] border-[1px] rounded-[5px] bg-white text-black border-black flex items-center justify-center gap-1">
+        <Button
+          placeholder=""
+          className="h-[65px] border-[1px] rounded-[5px] bg-white text-black border-black flex items-center justify-center gap-1"
+        >
           <span className="text-xl font-semibold leading-[28px] font-roboto text-nowrap">
             Load More
           </span>
