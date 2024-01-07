@@ -2,7 +2,7 @@
 import ThemeBreadcrumb from "@/components/common/ThemeBreadcrumb";
 import { iDot, iF, iLink, iLinkedin, iTwitter } from "@/lib/utils/icons";
 import Image from "next/image";
-import React from "react";
+import React, { ReactElement } from "react";
 import author from "../../assets/images/home/pb_author.png";
 import { Button } from "@material-tailwind/react";
 import img1 from "../../assets/images/blog-details/img1.png";
@@ -10,6 +10,7 @@ import Link from "next/link";
 import PopularBlogPageCard from "@/components/blogs/PopularBlogPageCard";
 import { popularBlogs } from "@/lib/utils/globalData";
 import { IPopularBlogs } from "@/lib/types/globals";
+import MainLayout from "@/layout/MainLayout";
 
 const BlogDetails = () => {
   return (
@@ -254,3 +255,7 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
+
+BlogDetails.getLayout = function getLayout(page: ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};

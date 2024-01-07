@@ -13,11 +13,11 @@ import Link from "next/link";
 
 const ProfileDropdown = () => {
   return (
-    <div className="ml-4">
+    <div className="ml-1 md:ml-4">
       <Popover placement="bottom-end">
         <PopoverHandler>
           <Image
-            className="w-[51px] h-[51px] rounded-full object-cover cursor-pointer"
+            className="size-[35px] md:size-[51px] rounded-full object-cover cursor-pointer"
             src={img}
             alt=""
           />

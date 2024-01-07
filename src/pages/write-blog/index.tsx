@@ -1,5 +1,6 @@
+import MainLayout from "@/layout/MainLayout";
 import dynamic from "next/dynamic";
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 
 const WriteBlogForm = dynamic(
   () => import("@/components/write-blog/WriteBlogForm"),
@@ -16,3 +17,7 @@ const WriteBlog = () => {
 };
 
 export default WriteBlog;
+
+WriteBlog.getLayout = function getLayout(page: ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};

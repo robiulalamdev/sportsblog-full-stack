@@ -1,15 +1,24 @@
-import MainLayout from "@/layout/MainLayout";
 import "@/styles/globals.css";
 import "react-quill/dist/quill.snow.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import type { AppProps } from "next/app";
+import { NextPage } from "next";
+import { ReactElement, ReactNode } from "react";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page);
+  return getLayout(
     <ThemeProvider>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }

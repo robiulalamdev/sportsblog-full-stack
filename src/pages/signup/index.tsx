@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SignupPage = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-[#191919]">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-[#191919] px-theme">
       <div className="max-w-[410px] w-full mx-auto grid grid-cols-1 gap-[18px] pt-[114px]">
         <div className="flex flex-col gap-y-4">
           <label className="text-base font-semibold text-white" htmlFor="name">

@@ -1,8 +1,9 @@
 import AccountSidebar from "@/components/account/AccountSidebar";
 import MyProfile from "@/components/account/accountTabContentArea/MyProfile";
 import Security from "@/components/account/accountTabContentArea/Security";
+import MainLayout from "@/layout/MainLayout";
 import { Button } from "@material-tailwind/react";
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 
 const routes = [
   { id: 1, name: "Account Settings" },
@@ -49,3 +50,7 @@ const AccountPage = () => {
 };
 
 export default AccountPage;
+
+AccountPage.getLayout = function getLayout(page: ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};

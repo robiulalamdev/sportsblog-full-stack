@@ -9,11 +9,13 @@ const Header = () => {
   return (
     <div className="bg-black border-b-[0.5px] border-white">
       <div className="h-full max-h-[75px] min-h-[75px] md:max-h-[95px] md:min-h-[95px] max-w-theme px-3 mx-auto flex justify-between items-center">
-        <Image
-          className="w-[100px] h-[30px] md:w-[136px] md:h-[41px]"
-          src={logo}
-          alt=""
-        />
+        <Link href="/">
+          <Image
+            className="w-[100px] h-[30px] md:w-[136px] md:h-[41px]"
+            src={logo}
+            alt=""
+          />
+        </Link>
         <div className="flex items-center gap-4">
           <Link href="/login">
             <Button
@@ -23,12 +25,14 @@ const Header = () => {
               Log in
             </Button>
           </Link>
-          <Button
-            placeholder=""
-            className="bg-primary rounded-[5px] leading-[24px] text-base w-[100px] md:w-[120px] h-[30px] md:h-[40px] flex justify-center items-center font-semibold md:font-bold text-black text-[13px] text-nowrap normal-case"
-          >
-            Write Article
-          </Button>
+          <Link href="/write-blog">
+            <Button
+              placeholder=""
+              className="bg-primary rounded-[5px] leading-[24px] text-base w-[100px] md:w-[120px] h-[30px] md:h-[40px] flex justify-center items-center font-semibold md:font-bold text-black text-[13px] text-nowrap normal-case"
+            >
+              Write Article
+            </Button>
+          </Link>
           <ProfileDropdown />
         </div>
       </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 const ResetPasswordPage = () => {
   const [step, setStep] = useState(1);
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-white">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white px-theme">
       {step === 1 && (
         <div className="max-w-[674px] w-full mx-auto grid grid-cols-1 gap-[18px]">
           <div className="mb-[64px]">

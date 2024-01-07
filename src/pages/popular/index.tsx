@@ -1,12 +1,13 @@
 import PopularBlogCard from "@/components/blogs/PopularBlogCard";
 import PopularBlogPageCard from "@/components/blogs/PopularBlogPageCard";
+import MainLayout from "@/layout/MainLayout";
 import { IPopularBlogs } from "@/lib/types/globals";
 import { popularBlogs } from "@/lib/utils/globalData";
 import { iArrowDown } from "@/lib/utils/icons";
 import { Button } from "@material-tailwind/react";
-import React from "react";
+import React, { ReactElement } from "react";
 
-const index = () => {
+const PopularPage = () => {
   return (
     <div className="max-w-theme mx-auto px-theme md:px-0 mt-[131px] pb-8">
       <div className="flex justify-between items-center mb-[34px]">
@@ -52,4 +53,8 @@ const index = () => {
   );
 };
 
-export default index;
+export default PopularPage;
+
+PopularPage.getLayout = function getLayout(page: ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};

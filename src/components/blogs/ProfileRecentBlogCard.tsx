@@ -58,7 +58,7 @@ const ProfileRecentBlogCard = ({ blog }: any) => {
           </Popover>
         </div>
       </div>
-      <h1 className="text-[#141A28] text-[18px] font-bold leading-[25px] mt-[16px] font-montserrat">
+      <h1 className="text-[#141A28] text-[18px] font-bold leading-[25px] mt-[16px] font-montserrat twoLine">
         {blog.title}
       </h1>
       <div className="mt-[12px] flex items-center gap-2">

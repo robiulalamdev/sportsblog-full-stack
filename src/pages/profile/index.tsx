@@ -3,7 +3,8 @@ import ProfileAllBlogs from "@/components/profile/ProfileAllBlogs";
 import ProfileBanner from "@/components/profile/ProfileBanner";
 import ProfileRecentBlogs from "@/components/profile/ProfileRecentBlogs";
 import ProfileTabs from "@/components/profile/ProfileTabs";
-import React, { useState } from "react";
+import MainLayout from "@/layout/MainLayout";
+import React, { ReactElement, useState } from "react";
 
 const ProfilePage = () => {
   const [tab, setTab] = useState(1);
@@ -24,3 +25,7 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
+ProfilePage.getLayout = function getLayout(page: ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};
