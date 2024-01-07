@@ -3,6 +3,7 @@ import logo from "../../../assets/brand/logo.png";
 import Image from "next/image";
 import { Button } from "@material-tailwind/react";
 import Link from "next/link";
+import ProfileDropdown from "../profile/ProfileDropdown";
 
 const Header = () => {
   return (
@@ -28,6 +29,7 @@ const Header = () => {
           >
             Write Article
           </Button>
+          <ProfileDropdown />
         </div>
       </div>
     </div>

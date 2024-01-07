@@ -1,5 +1,6 @@
 import MainLayout from "@/layout/MainLayout";
 import "@/styles/globals.css";
+import "react-quill/dist/quill.snow.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import type { AppProps } from "next/app";
 

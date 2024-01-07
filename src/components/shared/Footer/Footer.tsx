@@ -31,20 +31,20 @@ const Footer = () => {
           </div>
 
           <div className="pb-[38px] flex flex-col gap-8 md:flex-row md:justify-between items-center w-full max-w-theme px-theme">
-            <div className="uppercase flex items-center gap-x-[28px]">
-              <p className="text-[#7E7F81] font-semibold text-xs leading-[14px]">
+            <div className="uppercase flex items-center gap-x-[16px] md:gap-x-[28px]">
+              <p className="text-[#7E7F81] font-semibold text-[10px] md:text-xs leading-[14px]">
                 ABOUT
               </p>
-              <p className="text-[#7E7F81] font-semibold text-xs leading-[14px]">
+              <p className="text-[#7E7F81] font-semibold text-[10px] md:text-xs leading-[14px]">
                 CONTACT US
               </p>
-              <p className="text-[#7E7F81] font-semibold text-xs leading-[14px]">
+              <p className="text-[#7E7F81] font-semibold text-[10px] md:text-xs leading-[14px]">
                 help
               </p>
-              <p className="text-[#7E7F81] font-semibold text-xs leading-[14px]">
+              <p className="text-[#7E7F81] font-semibold text-[10px] md:text-xs leading-[14px]">
                 legal
               </p>
-              <p className="text-[#7E7F81] font-semibold text-xs leading-[14px]">
+              <p className="text-[#7E7F81] font-semibold text-[10px] md:text-xs leading-[14px]">
                 store
               </p>
             </div>
