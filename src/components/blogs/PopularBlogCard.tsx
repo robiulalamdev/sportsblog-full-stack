@@ -4,10 +4,10 @@ import React from "react";
 
 const PopularBlogCard = ({ blog }: any) => {
   return (
-    <div className="bg-white shadow max-h-[480px] h-fit">
-      <div className="max-h-[244.333px] h-full overflow-hidden">
+    <div className="bg-white shadow max-h-[480px] h-fit rounded-[5px]">
+      <div className="max-h-[244.333px] h-[244.333px] overflow-hidden rounded-t-[5px]">
         <Image
-          className="h-full w-full object-cover hover:scale-110 duration-700"
+          className="h-full w-full object-cover hover:scale-110 duration-700 rounded-t-[5px]"
           src={blog.cover_image}
           alt=""
         />
@@ -16,10 +16,10 @@ const PopularBlogCard = ({ blog }: any) => {
         <h1 className="text-black text-[9.526px] font-semibold leading-[14px] font-roboto">
           {blog.read_time}
         </h1>
-        <h1 className="text-black text-[16.33px] font-bold leading-[22px] mt-[11.9px] font-roboto">
+        <h1 className="text-black text-[16.33px] font-bold leading-[22px] mt-[11.9px] font-roboto twoLine">
           {blog.title}
         </h1>
-        <h1 className="text-black text-[10.886px] leading-[16.33px] mt-[4.88px] font-roboto">
+        <h1 className="text-black text-[10.886px] leading-[16.33px] mt-[4.88px] font-roboto twoLine">
           {blog.description}
         </h1>
         <div className="mt-[16px] w-full border-b-[1px] border-[#C4C4C4]"></div>

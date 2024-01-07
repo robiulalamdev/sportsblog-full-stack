@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const PopuplarBlogs = () => {
   return (
-    <div className="max-w-theme mx-auto px-theme md:px-0 mt-[131px]">
+    <div className="max-w-theme mx-auto px-theme mt-[131px]">
       <div className="flex justify-between items-center mb-[34px]">
         <h1 className="text-[32px] md:text-[48px] font-bold text-black leading-[42px] font-roboto">
           Popular

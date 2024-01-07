@@ -7,7 +7,7 @@ const PopularBlogPageCard = ({ blog }: any) => {
     <div className="bg-white h-fit">
       <div className="max-h-[300px] h-full overflow-hidden rounded-[5px]">
         <Image
-          className="h-full min-h-[300px] w-full object-cover hover:scale-110 duration-700 rounded-[5px]"
+          className="h-full min-h-[200px] md:min-h-[300px] w-full object-cover hover:scale-110 duration-700 rounded-[5px]"
           src={blog.cover_image}
           alt=""
         />
@@ -16,10 +16,10 @@ const PopularBlogPageCard = ({ blog }: any) => {
         <h1 className="text-black text-base font-semibold leading-[14px] font-roboto">
           {blog.read_time}
         </h1>
-        <h1 className="text-[#141A28] text-[24px] font-bold leading-[33px] mt-[11.9px] font-roboto">
+        <h1 className="text-[#141A28] text-[18px] md:text-[24px] font-bold leading-[33px] mt-[11.9px] font-roboto twoLine">
           {blog.title}
         </h1>
-        <h1 className="text-black text-base leading-[18.33px] mt-[4.88px] font-roboto">
+        <h1 className="text-black text-base leading-[18.33px] mt-[4.88px] font-roboto twoLine">
           {blog.description}
         </h1>
         <Link

@@ -9,7 +9,7 @@ import React, { ReactElement } from "react";
 
 const PopularPage = () => {
   return (
-    <div className="max-w-theme mx-auto px-theme md:px-0 mt-[131px] pb-8">
+    <div className="max-w-theme mx-auto px-theme mt-[131px] pb-8">
       <div className="flex justify-between items-center mb-[34px]">
         <div>
           <h1 className="text-[32px] md:text-[48px] font-bold text-black leading-[42px] font-roboto">

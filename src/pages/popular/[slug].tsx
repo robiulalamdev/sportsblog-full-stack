@@ -15,7 +15,7 @@ import MainLayout from "@/layout/MainLayout";
 const BlogDetails = () => {
   return (
     <div className="max-w-theme mx-auto px-theme">
-      <div className="max-w-[768px] mx-auto mt-[112px] mb-[80px]">
+      <div className="max-w-[768px] mx-auto mt-12 md:mt-[112px] mb-[80px]">
         <ThemeBreadcrumb
           items={[
             { title: "Blog", isLink: true, link: "/blogs", isCurrent: false },
@@ -27,7 +27,7 @@ const BlogDetails = () => {
             },
           ]}
         />
-        <h1 className="text-[48px] text-black font-bold font-roboto leading-[57.6px] mt-6">
+        <h1 className="text-[22px] md:text-[32px] lg:text-[48px] text-black font-bold font-roboto md:leading-[57.6px] mt-6">
           Blues must treat Qualifiers like playoffs, Allen says
         </h1>
 
@@ -89,8 +89,8 @@ const BlogDetails = () => {
           alt=""
         />
 
-        <div className="max-w-[768px] mx-auto mt-[104px]">
-          <h1 className="text-black font-bold text-[47px] leading-[48px]">
+        <div className="max-w-[768px] mx-auto mt-[30px] md:mt-[104px]">
+          <h1 className="text-black font-bold text-[25px] md:text-[47px] leading-[48px]">
             Introduction
           </h1>
           <p className="text-justify text-base leading-[24px] text-black mt-6 font-roboto">
@@ -227,10 +227,10 @@ const BlogDetails = () => {
         <div className="border-t-[1px] border-black w-full mb-5 max-w-[768px] mx-auto"></div>
       </section>
 
-      <div className="max-w-theme mx-auto px-theme md:px-0 mt-[131px] pb-8">
+      <div className="mt-[30px] md:mt-[131px] pb-8">
         <div className="flex justify-between items-center mb-[34px]">
           <div>
-            <h1 className="text-[32px] md:text-[48px] font-bold text-black leading-[42px] font-roboto">
+            <h1 className="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-black leading-[42px] font-roboto">
               Popular
             </h1>
             <p className="text-black text-[18px] font-roboto leading-[27px] mt-6 hidden md:block">
@@ -239,12 +239,12 @@ const BlogDetails = () => {
           </div>
           <Button
             placeholder=""
-            className="hover:shadow-primary hover:bg-primary hover:border-white hover:text-white border border-black text-black bg-white font-inter text-base leading-[24px] px-6 py-3 rounded-[5px]"
+            className="hover:shadow-primary hover:bg-primary hover:border-white hover:text-white border border-black text-black bg-white font-inter text-sm md:text-base leading-[24px] px-6 py-1 md:py-3 rounded-[5px]"
           >
             View all
           </Button>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-[32px] gap-y-[80px] mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-[16px] md:gap-x-[32px] gap-y-[40px] md:gap-y-[80px] mx-auto">
           {popularBlogs.map((item: IPopularBlogs, index: number) => (
             <PopularBlogPageCard key={index} blog={item} />
           ))}

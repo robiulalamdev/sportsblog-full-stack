@@ -13,7 +13,7 @@ const RecentBlogCard = ({ blog }: any) => {
           alt=""
         />
       </div>
-      <h1 className="text-[#141A28] text-[36px] font-bold leading-[46px] mt-[21px] font-montserrat">
+      <h1 className="text-[#141A28] text-[36px] font-bold leading-[46px] mt-[21px] font-montserrat twoLine">
         {blog.title}
       </h1>
       <div className="mt-[29px] flex items-center gap-2">
