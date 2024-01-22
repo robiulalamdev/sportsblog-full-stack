@@ -16,11 +16,13 @@ enum Role {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
-  name     String
-  email    String @unique
-  password String
-  role     Role   @default(User)
+  id                 Int     @id @default(autoincrement())
+  first_name         String
+  last_name          String?
+  public_author_name String?
+  email              String  @unique
+  password           String
+  role               Role    @default(User)
 
   @@map("user")
 }
@@ -29,6 +31,21 @@ model Category {
   id   Int    @id @default(autoincrement())
   name String
   slug String @unique
+  Blog Blog[]
 
   @@map("category")
+}
+
+model Blog {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  cover_image String
+  content     String
+  tags        String[]
+  publish     DateTime
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id])
+
+  @@map("blog")
 }
