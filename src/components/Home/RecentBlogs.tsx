@@ -3,10 +3,19 @@ import React from "react";
 import RecentBlogCard from "../blogs/RecentBlogCard";
 import { IRecentBlogs } from "@/lib/types/globals";
 import { Button } from "@material-tailwind/react";
+import bg from "../../assets/images/home/popularbg.png";
 
 const RecentBlogs = () => {
   return (
-    <div className="max-w-[1180px] mx-auto px-theme mt-[131px]">
+    <div
+      className="max-w-[1180px] mx-auto px-theme mt-[131px]"
+      style={{
+        backgroundImage: `url(${bg.src})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "1000px",
+        backgroundPosition: "center top",
+      }}
+    >
       <div className="flex justify-between items-center mb-[34px]">
         <h1 className="text-[22px] md:text-[35px] font-bold text-black leading-[42px] font-roboto underline">
           Recent

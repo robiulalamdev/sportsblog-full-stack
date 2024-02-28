@@ -7,7 +7,7 @@ import SportSection from "./SportSection";
 
 const HomePage = () => {
   return (
-    <div className="bg-[#F7F7F7]">
+    <div className="bg-[#181818]">
       <Banner />
       <Categories />
       <RecentBlogs />

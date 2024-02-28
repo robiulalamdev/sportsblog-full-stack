@@ -5,9 +5,9 @@ import { Button } from "@material-tailwind/react";
 import Link from "next/link";
 import ProfileDropdown from "../profile/ProfileDropdown";
 
-const Header = () => {
+const Header = ({ className }: any) => {
   return (
-    <div className="bg-black border-b-[0.5px] border-white">
+    <div className={`border-b-[0.5px] border-white/50 ${className}`}>
       <div className="h-full max-h-[75px] min-h-[75px] md:max-h-[95px] md:min-h-[95px] max-w-theme px-3 mx-auto flex justify-between items-center">
         <Link href="/">
           <Image
