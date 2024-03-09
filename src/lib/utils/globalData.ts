@@ -27,6 +27,38 @@ export const recentBlogs: IRecentBlogs[] = [
     author_name: "Gabie Sheber",
     createdAt: "May 22, 2020",
   },
+  {
+    id: 1,
+    title: "Boeser says report of potential trade from Canucks",
+    cover_image: rb2,
+    author_img: author,
+    author_name: "Gabie Sheber",
+    createdAt: "May 22, 2020",
+  },
+  {
+    id: 1,
+    title: "Boeser says report of potential trade from Canucks",
+    cover_image: rb2,
+    author_img: author,
+    author_name: "Gabie Sheber",
+    createdAt: "May 22, 2020",
+  },
+  {
+    id: 1,
+    title: "Boeser says report of potential trade from Canucks",
+    cover_image: rb2,
+    author_img: author,
+    author_name: "Gabie Sheber",
+    createdAt: "May 22, 2020",
+  },
+  {
+    id: 1,
+    title: "Boeser says report of potential trade from Canucks",
+    cover_image: rb2,
+    author_img: author,
+    author_name: "Gabie Sheber",
+    createdAt: "May 22, 2020",
+  },
 ];
 
 export const popularBlogs: IPopularBlogs[] = [
