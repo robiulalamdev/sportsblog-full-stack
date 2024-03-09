@@ -1,3 +1,4 @@
+import Header from "@/components/shared/Header/Header";
 import MainLayout from "@/layout/MainLayout";
 import dynamic from "next/dynamic";
 import React, { ReactElement, useState } from "react";
@@ -10,8 +11,11 @@ const WriteBlogForm = dynamic(
 const WriteBlog = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <div className="min-h-screen bg-white max-w-theme mx-auto px-theme mb-[100px]">
-      <WriteBlogForm />
+    <div>
+      <Header className="bg-black" />
+      <div className="min-h-screen bg-white max-w-theme mx-auto px-theme mb-[100px]">
+        <WriteBlogForm />
+      </div>
     </div>
   );
 };
