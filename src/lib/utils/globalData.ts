@@ -107,4 +107,26 @@ export const popularBlogs: IPopularBlogs[] = [
     createdAt: "11 Jan 2023",
     read_time: "10 min read",
   },
+  {
+    id: 2,
+    title: "Empowering Active Aging through Community Engagement",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    cover_image: pb2,
+    author_img: pb_author,
+    author_name: "john madrick",
+    createdAt: "11 Jan 2023",
+    read_time: "4 min read",
+  },
+  {
+    id: 3,
+    title: "CONGRATULATIONS Team Siaw Lim Hood Sun Thong!",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    cover_image: pb3,
+    author_img: pb_author,
+    author_name: "john madrick",
+    createdAt: "11 Jan 2023",
+    read_time: "6 min read",
+  },
 ];

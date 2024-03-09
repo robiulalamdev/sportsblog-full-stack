@@ -1,135 +1,39 @@
-import { recentBlogs } from "@/lib/utils/globalData";
-import React, { useRef, useState } from "react";
-import { IRecentBlogs } from "@/lib/types/globals";
-import bg from "../../assets/images/home/popularbg.png";
-import Slider from "react-slick";
-import Image from "next/image";
-import { iDot } from "@/lib/utils/icons";
+import { popularBlogs, recentBlogs } from "@/lib/utils/globalData";
+import React from "react";
+import RecentBlogCard from "../blogs/RecentBlogCard";
+import { IPopularBlogs, IRecentBlogs } from "@/lib/types/globals";
+import { Button } from "@material-tailwind/react";
+import PopularBlogCard from "../blogs/PopularBlogCard";
+import { iArrowDown } from "@/lib/utils/icons";
+import Link from "next/link";
+import bg from "../../assets/images/home/recent.png";
+import BlogCard from "../common/BlogCard";
 
 const RecentBlogs = () => {
-  const [centerCard, setCenterCard] = useState(1);
-
-  const sliderRef = useRef(null);
-
-  const next = () => {
-    sliderRef.current.slickNext();
-    setCenterCard(centerCard + 1);
-  };
-
-  const previous = () => {
-    sliderRef.current.slickPrev();
-    setCenterCard(centerCard - 1);
-  };
-
-  console.log(centerCard);
-
-  const settings = {
-    infinite: true,
-    slidesToShow: 3,
-    speed: 500,
-    arrows: false,
-  };
-
   return (
     <div
-      className="max-w-theme mx-auto px-theme mt-[131px] "
+      className="max-w-theme mx-auto px-theme mt-[131px] pb-[100px] "
       style={{
         backgroundImage: `url(${bg.src})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
+        backgroundSize: "90%",
         backgroundPosition: "center top",
       }}
     >
-      <div className="pt-[200px]">
-        <div className="relative h-fit w-full">
-          <Slider ref={sliderRef} {...settings}>
-            {recentBlogs.map((item: IRecentBlogs, index: number) => (
-              <div
-                key={index}
-                className={`${
-                  centerCard + 1 === index ? "!pl-[18px]" : "pr-[18px]"
-                }`}
-              >
-                <div
-                  className={`rounded-[25px]  bg-transparent backdrop-blur border-[1px]  px-[22px] pt-[22px] ${
-                    centerCard === index
-                      ? "border-primary h-[485px] max-w-[445px] mx-auto"
-                      : "border-gray-50 h-[445px] max-w-[400px] mt-5"
-                  }`}
-                >
-                  <div className="max-h-[215px] h-full overflow-hidden rounded-[10px]">
-                    <Image
-                      className="h-full w-full object-cover hover:scale-110 duration-700 rounded-[10px]"
-                      src={item.cover_image}
-                      alt=""
-                    />
-                  </div>
-                  <div className="px-[32px]">
-                    <h1 className="text-[#FFFFFF] text-[27px] font-bold leading-[46px] mt-[21px] font-inter twoLine">
-                      {item.title}
-                    </h1>
-                    <div className="mt-[29px] flex items-center gap-2">
-                      <Image
-                        className="w-[63px] h-[48px] rounded-full"
-                        src={item.author_img}
-                        alt=""
-                      />
-                      <p className="text-[#141A28] text-sm leading-[22.4px]">
-                        by {item.author_name}
-                      </p>
-                      {iDot}
-                      <p className="text-[#7E7F81] text-sm leading-[22.4px]">
-                        {item.createdAt}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-
-          <div className="absolute top-[45%] w-full flex items-center justify-between">
-            <button
-              className="bg-gray-100 hover:bg-primary hover:text-white text-gray-900 h-8 w-8 flex items-center justify-center rounded-full object-cover overflow-hidden"
-              onClick={() => previous()}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
-              </svg>
-            </button>
-
-            <button
-              className="bg-gray-100 hover:bg-primary hover:text-white text-gray-900 h-8 w-8 flex items-center justify-center rounded-full object-cover overflow-hidden"
-              onClick={() => next()}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-[12px] gap-y-[27.21px] md:gap-x-[22px] md:gap-y-[37px] mx-auto pt-[100px] md:pt-[260px]">
+        {popularBlogs.map((item: IPopularBlogs, index: number) => (
+          <BlogCard key={index} blog={item} />
+        ))}
+      </div>
+      <div className="flex justify-center items-center mt-[39.8px]">
+        <Button
+          placeholder=""
+          className="w-[150px] h-[50px] rounded-[70px] bg-primary flex items-center justify-center gap-1 font-normal normal-case outline-none hover:shadow-none shadow-none"
+        >
+          <span className="text-[15px] font-roboto text-black font-bold">
+            Load More
+          </span>
+        </Button>
       </div>
     </div>
   );

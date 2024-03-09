@@ -8,7 +8,7 @@ const MyProfile = () => {
   const [img, setImg] = useState(null);
 
   const imgRef = useRef<any>();
-  console.log(img);
+  // console.log(img);
   return (
     <div>
       <h1 className="text-[36px] font-extrabold font-montserrat text-[#141A28]">
@@ -18,20 +18,20 @@ const MyProfile = () => {
       <div className="mt-[42px] flex items-center gap-[10px]">
         {img ? (
           <img
-            className="w-[85px] h-[83px] object-contain"
+            className="w-[85px] h-[83px] object-cover rounded-full"
             src={URL.createObjectURL(img)}
             alt=""
           />
         ) : (
           <Image
-            className="w-[85px] h-[83px] object-contain"
+            className="w-[85px] h-[83px] object-cover rounded-full"
             src={profile}
             alt=""
           />
         )}
         <Button
           onClick={() => imgRef.current.click()}
-          className="border-[2px] border-[#D9DBDF] rounded-[50px] w-[145px] p-0 h-[32px] bg-white text-xs flex justify-center items-center font-bold font-inter text-black shadow-none hover:shadow-primary hover:bg-primary hover:text-white"
+          className="border-[2px] border-[#D9DBDF] rounded-[50px] w-[145px] p-0 h-[32px] bg-transparent text-xs flex justify-center items-center font-bold font-inter text-white shadow-none hover:shadow-none hover:bg-primary hover:text-white"
           placeholder=""
         >
           Change Avatar
@@ -47,7 +47,7 @@ const MyProfile = () => {
       </div>
 
       <form className="max-w-[470px] w-full mt-5 grid grid-cols-1 gap-y-[26px]">
-        <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+        <div className="bg-[#232323] border-[1px] border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
           <label
             className="text-[#7E7F81] text-sm leading-[12px]"
             htmlFor="Email"
@@ -57,11 +57,11 @@ const MyProfile = () => {
           <input
             type="email"
             placeholder="Terminator2@super.com"
-            className="text-base text-[#292929] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+            className="text-base text-white placeholder:text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
           />
         </div>
         <div>
-          <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+          <div className="bg-[#232323] border-[1px] border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
             <label
               className="text-[#7E7F81] text-sm leading-[12px]"
               htmlFor="author_name"
@@ -71,15 +71,17 @@ const MyProfile = () => {
             <input
               type="text"
               placeholder="Mr Smith"
-              className="text-base text-[#292929] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+              className="text-base text-white placeholder:text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
             />
           </div>
-          <p className="text-[#7E7F81] text-sm leading-[16px] mt-[6px]">
-            This is the name that will appear on your <br />
-            posts and public profile.
+          <p className="text-primary text-sm leading-[16px] mt-[6px]">
+            <i className="text-[12px] text-nowrap">
+              This is the name that will appear on your posts and public
+              profile.
+            </i>
           </p>
         </div>
-        <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+        <div className="bg-[#232323] border-[1px] border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
           <label
             className="text-[#7E7F81] text-sm leading-[12px]"
             htmlFor="first_name"
@@ -89,10 +91,10 @@ const MyProfile = () => {
           <input
             type="text"
             placeholder="Gabie"
-            className="text-base text-[#292929] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+            className="text-base text-white placeholder:text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
           />
         </div>
-        <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+        <div className="bg-[#232323] border-[1px] border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
           <label
             className="text-[#7E7F81] text-sm leading-[12px]"
             htmlFor="last_name"
@@ -102,7 +104,7 @@ const MyProfile = () => {
           <input
             type="text"
             placeholder="Sheber"
-            className="text-base text-[#292929] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+            className="text-base text-white placeholder:text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
           />
         </div>
 

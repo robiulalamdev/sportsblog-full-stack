@@ -1,53 +1,65 @@
-import PopularBlogCard from "@/components/blogs/PopularBlogCard";
-import PopularBlogPageCard from "@/components/blogs/PopularBlogPageCard";
+import BlogCard from "@/components/common/BlogCard";
 import MainLayout from "@/layout/MainLayout";
 import { IPopularBlogs } from "@/lib/types/globals";
 import { popularBlogs } from "@/lib/utils/globalData";
-import { iArrowDown } from "@/lib/utils/icons";
 import { Button } from "@material-tailwind/react";
 import React, { ReactElement } from "react";
+import bg from "../../assets/images/popular/bg.png";
+import Header from "@/components/shared/Header/Header";
 
 const PopularPage = () => {
   return (
-    <div className="max-w-theme mx-auto px-theme mt-[131px] pb-8">
-      <div className="flex justify-between items-center mb-[34px]">
-        <div>
-          <h1 className="text-[32px] md:text-[48px] font-bold text-black leading-[42px] font-roboto">
-            Popular
-          </h1>
-          <p className="text-black text-[18px] font-roboto leading-[27px] mt-6 hidden md:block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-          </p>
+    <div className="bg-[#181818]">
+      <Header />
+      <div
+        className="w-[551px] h-[111px] mx-auto !mt-[100px] hidden sm:block"
+        style={{
+          backgroundImage: `url(${bg.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundPosition: "center top",
+        }}
+      ></div>
+      <div
+        className="w-full max-w-[250px] h-[111px] mx-auto mt-[40px] sm:hidden"
+        style={{
+          backgroundImage: `url(${bg.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundPosition: "center top",
+        }}
+      ></div>
+      <div className="max-w-theme mx-auto px-theme pb-[100px] mt-[10px] md:mt-[30px]">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-[12px] gap-y-[27.21px] md:gap-x-[22px] md:gap-y-[37px] mx-auto">
+          {popularBlogs.map((item: IPopularBlogs, index: number) => (
+            <BlogCard key={index} blog={item} />
+          ))}
+          {popularBlogs.map((item: IPopularBlogs, index: number) => (
+            <BlogCard key={index} blog={item} />
+          ))}
+          {popularBlogs.map((item: IPopularBlogs, index: number) => (
+            <BlogCard key={index} blog={item} />
+          ))}
+          {popularBlogs.map((item: IPopularBlogs, index: number) => (
+            <BlogCard key={index} blog={item} />
+          ))}
+          {popularBlogs.map((item: IPopularBlogs, index: number) => (
+            <BlogCard key={index} blog={item} />
+          ))}
+          {popularBlogs.map((item: IPopularBlogs, index: number) => (
+            <BlogCard key={index} blog={item} />
+          ))}
         </div>
-        <Button
-          placeholder=""
-          className="hover:shadow-primary hover:bg-primary hover:border-white hover:text-white border border-black text-black bg-white font-inter text-base leading-[24px] px-6 py-3 rounded-[5px]"
-        >
-          View all
-        </Button>
-      </div>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-[32px] gap-y-[80px] mx-auto">
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
-        {popularBlogs.map((item: IPopularBlogs, index: number) => (
-          <PopularBlogPageCard key={index} blog={item} />
-        ))}
+        <div className="flex justify-center items-center mt-[39.8px]">
+          <Button
+            placeholder=""
+            className="w-[150px] h-[50px] rounded-[70px] bg-primary flex items-center justify-center gap-1 font-normal normal-case outline-none hover:shadow-none shadow-none"
+          >
+            <span className="text-[15px] font-roboto text-black font-bold">
+              Load More
+            </span>
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const ProfileBanner = () => {
         src={profile}
         alt=""
       />
-      <h1 className="text-[#141A28] text-[32px] md:text-[48px] font-extrabold font-montserrat leading-[48px]">
+      <h1 className="text-white text-[32px] md:text-[48px] font-extrabold font-montserrat leading-[48px]">
         Gabie Sheber
       </h1>
     </div>

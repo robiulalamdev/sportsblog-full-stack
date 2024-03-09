@@ -13,13 +13,13 @@ type AccountSidebarProps = {
 
 const AccountSidebar: React.FC<AccountSidebarProps> = ({ tab, setTab }) => {
   return (
-    <div className="bg-[#F5F7F9] max-w-[330px] w-full min-h-screen flex justify-center items-start">
+    <div className="bg-[#2D2D2D] max-w-[330px] w-full min-h-screen flex justify-center items-start rounded-r-[32px] border-b-[1px] border-r-[1px] border-white">
       <div className="grid grid-cols-1 gap-y-[28px] max-w-[228px] mt-[65px]">
         {routes.map((route: any, index: number) => (
           <Button
             onClick={() => setTab(route.id)}
-            className={`bg-transparent p-0 shadow-none hover:shadow-none hover:text-primary text-left ${
-              tab === route.id ? "text-primary" : "text-[#141A28]"
+            className={`bg-transparent p-0 shadow-none hover:shadow-none hover:text-primary text-left normal-case font-montserrat ${
+              tab === route.id ? "text-primary" : "text-white"
             }`}
             key={index}
             placeholder=""

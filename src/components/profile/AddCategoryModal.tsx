@@ -64,9 +64,9 @@ const AddCategoryModal: React.FC<AddCategoryModal> = ({
           mount: { scale: 1, y: 0 },
           unmount: { scale: 0.9, y: -100 },
         }}
-        className="bg-white"
+        className="backdrop-blur-xl bg-transparent"
       >
-        <div className="relative bg-white max-w-[9203px] h-fit min-h-[437px]">
+        <div className="relative max-w-[9203px] h-fit min-h-[437px]">
           <div
             onClick={() => handleClose()}
             className="absolute top-2 right-2 size-[38px] cursor-pointer"
@@ -74,13 +74,16 @@ const AddCategoryModal: React.FC<AddCategoryModal> = ({
             {iClose}
           </div>
 
-          <div className="pt-[80px] md:pt-[108px] px-[25px] md:px-[98px]">
+          <div className="pt-[80px] md:pt-[108px] px-[25px] md:px-[98px] pb-2">
             <div className="flex flex-col md:flex-row items-center gap-[20px]">
               <input
                 value={newCategoryName}
                 onChange={(e) => setNewCategoryName(e.target.value)}
                 type="text"
-                className="bg-[#F3F3F3] h-[60px] w-full border border-[#757575] rounded-[5px] px-3 outline-none"
+                placeholder="Type a category...."
+                className="bg-transparent backdrop-blur-md h-[60px] w-full border border-[#757575] rounded-[5px] px-3 outline-none placeholder:text-[#757575] placeholder:font-inter font-inter text-white
+                
+                "
               />
               <Button
                 onClick={addCategory}
@@ -90,7 +93,7 @@ const AddCategoryModal: React.FC<AddCategoryModal> = ({
                 ADD
               </Button>
             </div>
-            <div className="mt-[35px] grid grid-cols-1 gap-y-[25px]">
+            <div className="mt-[35px] grid grid-cols-1 gap-y-[25px] overflow-y-auto max-h-[300px]">
               {categories.map((category, index: number) => (
                 <div
                   key={index}
@@ -101,7 +104,7 @@ const AddCategoryModal: React.FC<AddCategoryModal> = ({
                     onChange={(e) => editCategory(index, e.target.value)}
                     type="text"
                     disabled={edit === category.id ? false : true}
-                    className="w-full h-[54px] border-[2px] border-[#D9DBDF] outline-none bg-white rounded-[5px] px-3"
+                    className="w-full h-[54px] border-[2px] border-[#D9DBDF] outline-none bg-white rounded-[5px] px-3 text-black font-inter"
                   />
                   <div className="flex items-center gap-[10px] w-[199px]">
                     {category.id === edit ? (

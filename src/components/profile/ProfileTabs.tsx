@@ -28,15 +28,15 @@ const ProfileTabs: React.FC<ProfileTabsProps> = ({ tab, setTab }) => {
               onClick={() => setTab(item.id)}
               className={`bg-transparent shadow-none  hover:shadow-none border-b-[3px] font-montserrat p-0 rounded-none uppercase text-xs md:text-sm font-bold leading-[16px] text-nowrap ${
                 item.id === tab
-                  ? "text-[#141A28] !border-[#FFA903] "
-                  : "text-[#7E7F81] border-transparent"
+                  ? "text-primary !border-[#FFA903] "
+                  : "text-white border-transparent"
               }`}
               placeholder=""
               key={index}
             >
               {item.name}{" "}
               {item?.total && (
-                <span className="text-sm text-[#7E7F81] font-normal">
+                <span className="text-sm text-white font-normal">
                   {item.total}
                 </span>
               )}

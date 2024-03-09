@@ -5,15 +5,15 @@ import { Button } from "@material-tailwind/react";
 const Security = () => {
   return (
     <div>
-      <h1 className="text-[36px] font-extrabold font-montserrat text-[#141A28]">
+      <h1 className="text-[36px] font-extrabold font-montserrat text-white">
         Security
       </h1>
 
       <form className="max-w-[470px] w-full mt-5 grid grid-cols-1 gap-y-[26px]">
-        <h1 className="text-[#141A28] font-semibold font-montserrat leading-[16px] text-base">
+        <h1 className="text-white font-semibold font-montserrat leading-[16px] text-base">
           Change Password
         </h1>
-        <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+        <div className="bg-[#232323] border border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
           <label
             className="text-[#7E7F81] text-sm leading-[12px]"
             htmlFor="Current_Password"
@@ -22,11 +22,11 @@ const Security = () => {
           </label>
           <input
             type="password"
-            placeholder="⚫⚫⚫⚫⚫⚫⚫⚫"
-            className="text-base text-[#292929] placeholder:!text-[8px] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+            placeholder="⚪⚪⚪⚪⚪⚪"
+            className="text-base text-white placeholder:!text-[8px] placeholder:!text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
           />
         </div>
-        <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+        <div className="bg-[#232323] border border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
           <label
             className="text-[#7E7F81] text-sm leading-[12px]"
             htmlFor="New_Password"
@@ -35,11 +35,11 @@ const Security = () => {
           </label>
           <input
             type="password"
-            placeholder="⚫⚫⚫⚫⚫⚫⚫⚫"
-            className="text-base text-[#292929] placeholder:!text-[8px] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+            placeholder="⚪⚪⚪⚪⚪⚪"
+            className="text-base text-white placeholder:!text-[8px] placeholder:!text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
           />
         </div>
-        <div className="bg-[#F6F7F9] w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
+        <div className="bg-[#232323] border border-white w-full h-[60px] rounded-[5px] py-[12px] px-[16px] grid grid-cols-1 gap-y-[6px]">
           <label
             className="text-[#7E7F81] text-sm leading-[12px]"
             htmlFor="Confirm_New_Password"
@@ -48,8 +48,8 @@ const Security = () => {
           </label>
           <input
             type="password"
-            placeholder="⚫⚫⚫⚫⚫⚫⚫⚫"
-            className="text-base text-[#292929] placeholder:!text-[8px] placeholder:text-[#292929] leading-[16px] border-none outline-none h-full w-full bg-transparent"
+            placeholder="⚪⚪⚪⚪⚪⚪"
+            className="text-base text-white placeholder:!text-[8px] placeholder:text-white leading-[16px] border-none outline-none h-full w-full bg-transparent"
           />
         </div>
 

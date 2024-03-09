@@ -9,13 +9,13 @@ import React, { ReactElement, useState } from "react";
 const ProfilePage = () => {
   const [tab, setTab] = useState(1);
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-[#F5F7F9]">
+    <div className="min-h-screen bg-[#181818]">
+      <div className="">
         <ProfileBanner />
         <ProfileTabs tab={tab} setTab={setTab} />
       </div>
 
-      <section className="max-w-theme mx-auto px-theme bg-white mt-[60px]">
+      <section className="max-w-theme mx-auto px-theme mt-[60px]">
         {tab === 1 && <ProfileRecentBlogs />}
         {tab === 2 && <ProfileAllBlogs />}
         {tab === 3 && <BlogsArchived />}

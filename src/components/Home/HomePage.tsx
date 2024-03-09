@@ -10,9 +10,9 @@ const HomePage = () => {
     <div className="bg-[#181818]">
       <Banner />
       <Categories />
-      <RecentBlogs />
       <PopuplarBlogs />
-      <SportSection />
+      <RecentBlogs />
+      {/* <SportSection /> */}
     </div>
   );
 };
