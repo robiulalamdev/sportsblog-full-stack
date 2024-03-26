@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 const BlogCard = ({ blog }: any) => {
-  console.log(blog);
+  // console.log(blog);
   return (
     <>
       <div className="h-fit bg-[#F4F4F4] hover:bg-primary cursor-pointer duration-300 rounded-[12px] md:rounded-[19.82px] px-[8px] md:px-[12px] pt-[8px] md:pt-[12px] group">
